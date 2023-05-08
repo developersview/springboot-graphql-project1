@@ -1,0 +1,55 @@
+{
+  allBooks {
+    id
+    title
+    pages
+    author {
+      name
+    }
+  }
+}
+-----------------------------
+{
+  getBookById(id: 2) {
+    id
+    title
+    pages
+    author {
+      name
+    }
+  }
+}
+---------------------------------
+mutation {
+  updateBookPages(id: 2, pages: 350) {
+    id
+    title
+    pages
+    author {
+      name
+    }
+  }
+}
+-----------------------------------
+mutation {
+  updateBookTitle(id: 2, 
+  title: "Springboot 3 + Spring Security 6") {
+    id
+    title
+    pages
+    author {
+      name
+    }
+  }
+}
+-----------------------------------
+mutation {
+  deleteBook(id: 1) {
+    id
+    title
+    pages
+    author {
+      name
+    }
+  }
+}
